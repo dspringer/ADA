@@ -1,0 +1,41 @@
+<h1><%= @course_admin.course_name %> <%= @course_admin.course_number %></h1>
+<p>
+  Course Description
+  <br />
+  <%= @course_admin.course_description %>
+  <br />
+  <br />
+    
+  Credits: 
+  <%= @course_admin.credits %>
+  <br />
+  Pre-Requisites: 
+  <%= @course_admin.pre_req %>
+  <br />
+  Co-Requisites: 
+  <%= @course_admin.co_req %>
+  <br />
+  Suggested Year: 
+  <%= @course_admin.sugg_year %>
+  <br />
+  Suggested Term: 
+  <%= @course_admin.sugg_term %>
+  <br />
+  Next Offered Year: 
+  <%= @course_admin.next_off_year %>
+  <br />
+  Next Offered Term: 
+  <%= @course_admin.next_off_term %>
+  <br />
+  Generally Offered: 
+  <%= @course_admin.generally_off %>
+  <br />
+  Major: 
+  <%= @course_admin.major %>
+  <br />
+  Minor: 
+  <%= @course_admin.minor %>
+  <br />
+</p>
+<%= link_to "<< Back to Courses List", course_admins_path %>
+<%= link_to "Delete", course_admin_path(@course_admin)%>

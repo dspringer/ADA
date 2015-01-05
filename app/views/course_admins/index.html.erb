@@ -1,0 +1,41 @@
+<h1>All Courses</h1>
+
+<table id="t01">
+    <tr>
+      <th>Course</th>
+      <th>Description</th>
+      <th>Credits</th>		
+      <th>Pre-Req</th>
+      <th>Co-Req</th>
+      <th>Suggested Year</th>
+      <th>Suggested Term</th>
+      <th>Next Offered Year</th>
+      <th>Next Offered Term</th>
+      <th>Generally Offered</th>
+      <th>Major</th>
+      <th>Minor</th>
+      <!--<th>Pre / Co <b>[c]</b> - Requisites</th> -->
+    </tr>
+    <% @course_admins.each do |courseadmin| %>
+    <tr>
+      <% a = courseadmin.course_name%>
+      <% b = courseadmin.course_number%>
+      <% c = a + " " + b%>
+      <td><%= link_to "#{c}", course_admin_path(courseadmin) %></td>	
+      <td><%= courseadmin.course_description %></td>		
+      <td><%= courseadmin.credits %></td>
+      <td><%= courseadmin.pre_req %></td>
+      <td><%= courseadmin.co_req %></td>
+      <td><%= courseadmin.sugg_year %></td>
+      <td><%= courseadmin.sugg_term %></td>
+      <td><%= courseadmin.next_off_year %></td>
+      <td><%= courseadmin.next_off_term %></td>
+      <td><%= courseadmin.generally_off %></td>
+      <td><%= courseadmin.major %></td>
+      <td><%= courseadmin.minor %></td>
+      
+    </tr>
+    <% end %>
+</table>  
+<br />
+<%= link_to "Create New Course", new_course_admin_path %>
