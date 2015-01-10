@@ -38,4 +38,5 @@
   <br />
 </p>
 <%= link_to "<< Back to Courses List", course_admins_path %>
-<%= link_to "Delete", course_admin_path(@course_admin)%>
+<%= link_to "Delete", course_admin_path(@course_admin),data: {confirm: "Really delete this course?"} , method: :delete%>
+<%= link_to "Edit", edit_course_admin_path(@course_admin)%>

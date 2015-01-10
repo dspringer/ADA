@@ -1,4 +1,8 @@
-== README
+== ADA
+
+ADA is the Advanced Digital Advising tool implemented by the University of Massachusetts Boston's Engineering Department 
+
+This is definitely still a work in progress, and as such, even the README will remain largely unchanged until I learn how to properly fill it out. Thanks!
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
